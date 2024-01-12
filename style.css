@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+@media (max-width: 576px) {
+    body{
+        background-size: contain;
+    }
+    main,
+    .card{
+        transform: scale(0.8);
+        transition: all .2s;
+    }
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: var(--Pale-blue) url('./images/pattern-background-desktop.svg') no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    transition: all .2s;
+}
+
+.card{
+    width: 30rem;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--Very-pale-blue);
+    box-shadow: 0 1rem 2rem 0.5rem hsla(245, 75%, 52%, 0.276);
+    transition: all .2s;
+}
+
+.card .hero{
+    height: 15rem;
+}
+
+.card .rest{
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.rest .description{
+    padding: 0 2rem;
+}
+
+.card,
+.card .plan{
+    border-radius: 1rem;
+}
+
+.card .hero{
+    background: url('./images/illustration-hero.svg') ;
+    border-radius: 1rem 1rem 0 0;
+    background-size: cover;
+}
+
+.card .text{
+    color: var(--Dark-blue);
+}
+.card .text2{
+    font-size: 1rem;
+    color: var(--Desaturated-blue);
+    text-align: center;
+}
+
+.card .rest .title{
+    font-weight: 900;
+}
+
+/* plan */
+
+.rest .plan{
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: hsla(225, 100%, 94%, 0.365);
+}
+.plan .img{
+    margin-right: 2rem;
+}
+.plan a{
+    justify-self: flex-end;
+    position: absolute;
+    right: 1.5rem;
+    transition: all .3s ease;
+}
+.plan .timming{
+    font-weight: 900;
+}
+.plan a:hover,
+.plan a:focus-visible,
+.plan a:active{
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, 0.596);
+    transition: all .3s ease;
+}
+
+/* button */
+
+.rest .button{
+    display: flex;
+    flex-direction: column;
+    height: 8rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.rest .button,
+.button .btn{
+    width: 100%;
+    border-radius: 1rem;
+}
+.button .btn{
+    padding: 1rem 0;
+    background: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    font-weight: 700;
+    border: none;
+    transition: all .3s ease;
+    box-shadow: 0 1rem 0.5rem 0.5rem var(--Pale-blue);
+}
+
+.button .btn:hover,
+.button .btn:focus-visible,
+.button .btn:active{
+    outline: none;
+    border: none;
+    background: hsla(245, 75%, 52%, 0.596);
+    transition: all .3s ease;
+}
+
+.button .btn1{
+    color: var(--Desaturated-blue);
+    font-size: 1rem;
+    font-weight: 700;
+    background: none;
+    border: none;
+    transition: all .3s ease;
+}
+
+.button .btn1:hover,
+.button .btn1:focus-visible,
+.button .btn1:active{
+    color: var(--Dark-blue);
+    transition: all .3s ease;
+}
