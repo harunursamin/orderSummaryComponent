@@ -14,18 +14,7 @@
     --Dark-blue: hsl(223, 47%, 23%);
 }
 
-@media (max-width: 576px) {
-    body{
-        background-size: contain;
-    }
-    main,
-    .card{
-        transform: scale(0.8);
-        transition: all .2s;
-    }
-}
-
-body{
+main{
     min-width: 100vw;
     min-height: 100vh;
     background: var(--Pale-blue) url('./images/pattern-background-desktop.svg') no-repeat;
@@ -33,18 +22,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
-main{
-    transition: all .2s;
-}
+
 
 .card{
     width: 30rem;
     height: 45rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     background: var(--Very-pale-blue);
     box-shadow: 0 1rem 2rem 0.5rem hsla(245, 75%, 52%, 0.276);
     transition: all .2s;
@@ -52,7 +39,11 @@ main{
 
 .card .hero{
     height: 15rem;
+    background: url('./images/illustration-hero.svg') center ;
+    border-radius: 1rem 1rem 0 0;
+    background-size: cover;
 }
+
 
 .card .rest{
     height: 30rem;
@@ -72,13 +63,6 @@ main{
 .card .plan{
     border-radius: 1rem;
 }
-
-.card .hero{
-    background: url('./images/illustration-hero.svg') ;
-    border-radius: 1rem 1rem 0 0;
-    background-size: cover;
-}
-
 .card .text{
     color: var(--Dark-blue);
 }

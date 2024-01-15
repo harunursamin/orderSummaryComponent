@@ -1,0 +1,33 @@
+@media (max-width: 576px) {
+    main{
+        min-height: 100svh !important;
+        background: var(--Pale-blue) url('./images/pattern-background-mobile.svg') no-repeat !important;
+        background-size: contain !important;
+    }
+    .card{
+        width: 25rem !important;
+        height: 40rem !important;
+        transition: all .2s;
+    }
+    .card .hero{
+        background-size: cover;
+        height: 13rem !important;
+    }
+    .card .rest{
+        height: 30rem !important;
+        padding: 1.5rem !important;
+    }
+    .rest .description{
+        padding: 0 0.5rem !important;
+    }
+    .rest .button{
+        justify-content: space-between;
+        height: 6rem ;
+    }
+    .button .btn{
+        padding: .7rem !important;
+    }
+    .plan .img{
+        margin-right: 1rem;
+    }
+}
